@@ -3,6 +3,6 @@
 
     <string name="app_name">tictactoe</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="new_game">New game</string>
 
 </resources>

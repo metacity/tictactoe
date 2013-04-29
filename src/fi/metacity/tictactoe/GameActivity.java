@@ -139,12 +139,11 @@ public class GameActivity extends Activity {
 			if (mTictacToe.findWinner() == null) {
 				mTictacToe.makeHumanMove(mRow, mColumn);
 				mButtons[mRow][mColumn].setText(String.valueOf(mHumanMark));
-				announceWinnerIfPossible();
 				if (mTictacToe.findWinner() == null) {
 					Move cpuMove = mTictacToe.makeCpuMove();
 					mButtons[cpuMove.i][cpuMove.j].setText(String.valueOf(mCpuMark));
-					announceWinnerIfPossible();
 				}
+				announceWinnerIfPossible();
 			}
 		}
 		

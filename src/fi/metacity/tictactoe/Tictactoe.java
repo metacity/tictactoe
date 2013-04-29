@@ -10,7 +10,7 @@ public class Tictactoe {
 	private final char mHumanMark;
 	private final char mCpuMark;
 	
-	// Super-duper-simple selfish CPU AI (won't try to block player moves)
+	// Super-duper-simple selfish CPU AI (won't try to block human player's moves)
 	private Move mLastMove;
 	private Move mSecondToLastMove;
 	private int mIDirection;
@@ -31,7 +31,7 @@ public class Tictactoe {
 	}
 
 	/**
-	 * Insets human player's mark in the specified coordinates on the board.
+	 * Inserts human player's mark in the specified coordinates on the board.
 	 *  
 	 * @param i  row of the move
 	 * @param j  column of the move

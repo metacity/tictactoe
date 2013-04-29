@@ -40,8 +40,9 @@ public class Tictactoe {
 		if (i >= mBoard.length || j >= mBoard[i].length) {
 			throw new IllegalArgumentException("Movement parameters outside the board!");			
 		}
-		if (isFull()) return;
-		mBoard[i][j] = mHumanMark;
+		if (!isFull() && mBoard[i][j] == ' ') {
+			mBoard[i][j] = mHumanMark;
+		}
 	}
 	
 	/**

@@ -81,8 +81,8 @@ public class GameActivity extends Activity {
 				button.setLayoutParams(rowParams);
 				button.setTextSize(40f);
 				Spannable number = new SpannableString(" " + (i*3 + j + 1) + " ");
-			    number.setSpan(new AbsoluteSizeSpan(16, true), 1, 2, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-			    button.setText(number);
+				number.setSpan(new AbsoluteSizeSpan(16, true), 1, 2, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+				button.setText(number);
 				button.setBackgroundColor(color.background_light);
 				button.setOnClickListener(new SquareClickListener(i, j));
 

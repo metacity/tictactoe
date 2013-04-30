@@ -65,7 +65,7 @@ public class Tictactoe {
 			mSecondToLastMove = mLastMove;
 			mLastMove = newMove;
 		}
-		// On successive moves, attempt to continue in the defined direction.
+		// On successive moves, attempt to continue in the previously defined direction.
 		// Failing that, attempt to continue in reverse direction.
 		// Failing THAT, randomly select a new square.
 		else {
@@ -79,8 +79,9 @@ public class Tictactoe {
 				mSecondToLastMove = mLastMove;
 				mLastMove = new Move(newI, newJ); 
 			} else {
-				newI = mLastMove.i - mIDirection;
-				newJ = mLastMove.j - mJDirection;
+				// Try reverse direction from the 1st move
+				newI = mSecondToLastMove.i - mIDirection;
+				newJ = mSecondToLastMove.j - mJDirection;
 				if (newI >= 0 && newI <= 2
 				 && newJ >= 0 && newJ <= 2
 				 && mBoard[newI][newJ] == ' ') {
